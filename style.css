@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+        --color-primary-1: hsl(31, 77%, 52%);
+        --color-primary-2: hsl(184, 100%, 22%);
+        --color-primary-3: hsl(179, 100%, 13%);
+
+        --color-neutral-white: hsla(0, 0%, 100%, 0.75);
+        --color-neutral-grey: hsl(0, 0%, 95%);
+}
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+img {
+        max-width: 25%;
+        max-height: 25%;
+        display: block;
+}
+
+p,
+h1,
+h2 {
+        overflow-wrap: break-word;
+}
+
+body {
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 0.875rem;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        margin-inline: 1.5rem;
+        margin-block: 10%;
+        letter-spacing: .02rem;
+}
+
+.container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: .5rem;
+        overflow: hidden;
+        min-height: 75%;
+}
+
+.container>* {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 2rem;
+        padding: 3rem;
+}
+
+.card-1 {
+        background-color: var(--color-primary-1);
+}
+
+.card-2 {
+        background-color: var(--color-primary-2);
+}
+
+.card-3 {
+        background-color: var(--color-primary-3);
+}
+
+.container h1 {
+        font-family: 'Big Shoulders Display', cursive;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: var(--color-neutral-grey);
+}
+
+.container p {
+        color: var(--color-neutral-white);
+        line-height: 1.5rem;
+}
+
+.button {
+        font-family: 'Lexend Deca', sans-serif;
+        font-weight: 600;
+        padding: 1rem 2.5rem;
+        border-radius: 100vw;
+        border: 2px solid var(--color-neutral-grey);
+        background-color: var(--color-neutral-grey);
+        align-self: flex-start;
+        mix-blend-mode: screen;
+        cursor: pointer;
+}
+.button:hover{
+        background: transparent;
+        color: var(--color-neutral-grey);;
+}
+
+@media screen and (min-width: 800px) {
+        .container {
+                flex-direction: row;
+                margin: 10%;
+        }
+        body{
+                margin-block: 0%;
+        }
+}
